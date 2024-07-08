@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    transition: background-color 0.3s;
+}
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    padding-top: 20px;
+    transition: all 0.3s;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+#content {
+    width: 100%;
+    padding: 20px;
+    margin-left: 250px;
+    transition: all 0.3s;
+}
+#content.active {
+    margin-left: 0;
+}
+.navbar {
+    height: 60px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.navbar-toggler {
+    margin: 5px;
+}
+.list-group-item {
+    transition: background-color 0.3s;
+}
