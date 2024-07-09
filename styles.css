@@ -36,3 +36,7 @@ body {
 .list-group-item {
     transition: background-color 0.3s;
 }
+.rounded {
+    margin-left: 40px;
+    max-width: 450px;
+}
