@@ -16,7 +16,7 @@ function showpage(pageid) {
 }
 
 async function sendMessage() {
-    const userInput = document.getElementById('userInput').value;
+    const prompt = "abc";
     const responseElement = document.getElementById('response');
 
     const response = await fetch('https://main--interessenwochebackend.netlify.app/.netlify/functions/generate-text', {
@@ -24,7 +24,7 @@ async function sendMessage() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: userInput }),
+        body: JSON.stringify({ message: prompt }),
     });
 
     const data = await response.json();
