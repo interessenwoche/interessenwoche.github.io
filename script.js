@@ -14,3 +14,19 @@ function showpage(pageid) {
     document.getElementById(pageid).style.display = 'block';
     activePage = pageid;
 }
+
+async function sendMessage() {
+    const userInput = document.getElementById('userInput').value;
+    const responseElement = document.getElementById('response');
+
+    const response = await fetch('https://main--interessenwochebackend.netlify.app/.netlify/functions/generate-text', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: userInput }),
+    });
+
+    const data = await response.json();
+    responseElement.innerText = data.response;
+}
