@@ -15,8 +15,8 @@ function showpage(pageid) {
     activePage = pageid;
 }
 
-async function sendMessage() {
-    const prompt = "abc";
+/*
+async function getAItext() {
     const responseElement = document.getElementById('response');
 
     const response = await fetch('https://main--interessenwochebackend.netlify.app/.netlify/functions/generate-text', {
@@ -24,9 +24,9 @@ async function sendMessage() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: prompt }),
     });
 
     const data = await response.json();
-    responseElement.innerText = data.response;
+    responseElement.innerText = JSON.stringify(data);
 }
+*/
