@@ -38,5 +38,6 @@ body {
 }
 .rounded {
     margin-left: 40px;
-    max-width: 450px;
+    max-width: 100%;
+    width: 450px;
 }
